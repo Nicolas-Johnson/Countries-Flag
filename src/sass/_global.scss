@@ -1,2 +1,63 @@
-@use 'global';
-@use 'components';
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+:root {
+    --bg-darkblue: hsl(207, 26%, 17%);
+    --bg-elements-darkblue: hsl(209, 23%, 22%);
+    --text-ligthMode-darkblue: hsl(200, 15%, 8%);
+    --darkGrey-ligthMode: hsl(0, 0%, 52%);
+    --bg-ligthMode-lightGray: hsl(0, 0%, 98%);
+    --white-lightMode-el-darkMode-text: hsl(0, 0%, 100%);
+
+    --fontSize-home-items: 14px;
+    --fontSize-detail-page: 16px;
+}
+
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 300;
+    font-size: var(--fontSize-home-items);
+    font-style: normal;
+    background-color: var(--bg-darkblue);
+    color: var(--white-lightMode-el-darkMode-text);
+    margin: 0;
+    padding: 0;
+    
+
+    .items {
+        background-color: var(--bg-elements-darkblue);
+    }
+}
+
+.light-mode {
+    background-color: var(--bg-ligthMode-lightGray);
+    color: var(--text-ligthMode-darkblue);
+
+    .items {
+        background-color: inherit;
+        color: inherit;
+
+        button {
+            color: inherit;
+        }
+    }
+
+    .inputs {
+        color: var(--darkGrey-ligthMode);
+    }
+}
+
+
+
+
+  
