@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import CardCountrie from './CardCountrie'
 import { CountriesContext } from '../utils/context/CountriesContext';
+import { Link } from "react-router-dom";
 
 const ShowFlags = () => {
     const [show, setShow] = useState([]);
@@ -56,8 +57,8 @@ const ShowFlags = () => {
         <div className='show-flags'>
             <div className="wrapper">
                 {filter ? show.map((countrie) => {
-                    const {flags, name, population, region, capital} = countrie;
-                    return <CardCountrie key={name.common} countrie={countrie} />
+                    const {flags, name, population, region, capital, cca2} = countrie;
+                    return <Link className='link' key={name.common} to={`about/${cca2}`}><CardCountrie  countrie={countrie} /></Link>
                 }) : <>Loading ...</>}
             </div>
             <div className="pages">

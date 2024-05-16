@@ -5,6 +5,7 @@ import { useFectchData, useFectchDataByRegion, useFectchDataByName } from './uti
 import Header from './components/Header.jsx';
 import Search from './components/Search.jsx';
 import ShowFlags from './components/ShowFlags.jsx';
+import { Outlet } from 'react-router-dom';
 
 function App() {
   const { data, loading, error } = useFectchData();
@@ -21,7 +22,6 @@ function App() {
   return (
     <CountriesContext.Provider value={{ countries, setCountries, loading, error, setFilter, filter }}>
       <>
-        <Header />
         <Search />
         <ShowFlags />
       </>

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const allUrl = 'https://restcountries.com/v3.1/all';
 const byRegionUrl = `https://restcountries.com/v3.1/region/`;
-const countrieByNameUrl = `https://restcountries.com/v3.1/name/`
+const countrieByNameUrl = `https://restcountries.com/v3.1/alpha/`
 
 export const useFectchData = () => {
     const [data, setData] = useState();

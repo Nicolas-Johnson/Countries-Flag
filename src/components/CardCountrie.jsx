@@ -7,7 +7,6 @@ const CardCountrie = ({ countrie }) => {
 
   return (
     <div className='items'>
-        <a href="#">
         <img src={flags.svg} alt={`Flag of ${name.common}`} />
         <div className="infos">
             <h1>{name.common}</h1>
@@ -15,7 +14,6 @@ const CardCountrie = ({ countrie }) => {
             <h2><span>Region: </span>{region}</h2>
             <h2><span>Capital: </span>{captalToUse}</h2>
         </div>
-        </a>
     </div>
   )
 }
