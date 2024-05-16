@@ -3,23 +3,27 @@ import './sass/style.scss'
 import { CountriesContext } from './utils/context/CountriesContext.js';
 import { useFectchData, useFectchDataByRegion, useFectchDataByName } from './utils/hooks/useFetchData';
 import Header from './components/Header.jsx';
+import Search from './components/Search.jsx';
+import ShowFlags from './components/ShowFlags.jsx';
 
 function App() {
   const { data, loading, error } = useFectchData();
-  const [countries, setCountries] = useState({countries: 'countries'});
+  const [countries, setCountries] = useState([]);
+  const [filter, setFilter] = useState([]);
 
   useEffect(() => {
     if(!loading && !error && data) {
-      setCountries(data);
+      setCountries([...data]);
+
     }
-  }, [loading, data, error]);
-
-
+  }, [loading, data, error]);  
 
   return (
-    <CountriesContext.Provider value={{ ...countries, setCountries, loading, error }}>
+    <CountriesContext.Provider value={{ countries, setCountries, loading, error, setFilter, filter }}>
       <>
         <Header />
+        <Search />
+        <ShowFlags />
       </>
     </CountriesContext.Provider>
   )

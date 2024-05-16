@@ -40,11 +40,11 @@ body {
 }
 
 .light-mode {
-    background-color: var(--bg-ligthMode-lightGray);
+    background-color: var(--white-lightMode-el-darkMode-text);
     color: var(--text-ligthMode-darkblue);
 
     .items {
-        background-color: inherit;
+        background-color: var(--bg-ligthMode-lightGray);
         color: inherit;
 
         button {
@@ -54,6 +54,10 @@ body {
 
     .inputs {
         color: var(--darkGrey-ligthMode);
+    }
+
+    .pagesBtn {
+        background-color: var(--bg-ligthMode-lightGray);
     }
 }
 

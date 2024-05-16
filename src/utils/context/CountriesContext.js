@@ -1,6 +1,7 @@
 import { createContext } from 'react';
 
 export const CountriesContext = createContext({
-    countries: {},
+    countries: [],
+    filter: [],
     setCountriesData: () => {},
 });

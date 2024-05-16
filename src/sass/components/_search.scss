@@ -1,0 +1,40 @@
+.search {
+    // background-color: green;
+    min-height: 100%;
+
+    .wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 80%;
+        margin: 0 auto;
+        padding: 40px 0;
+        gap: 20px;
+
+        input {
+            color: inherit;
+            border: none;
+            outline: none;
+            box-shadow: 1px 1px 5px black;
+            padding: 15px 20px 15px 20px;
+            border-radius: 5px;
+            width: 300px;
+        }
+
+        select {
+            border: none;
+            outline: none;
+            padding: 15px 20px 15px 20px;
+            width: 200px;
+            color: inherit;
+            border-radius: 5px;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.445);
+            
+
+        }
+
+
+
+    }
+}
